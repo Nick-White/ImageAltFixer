@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "ImageAltFixer-WebExtension",
+	"version": "0.1",
+
+	"applications": {
+		"gecko": {
+			"id": "ImageAltFixer-WebExtension@email.com"
+		}
+	},
+	
+	"permissions": [
+		"<all_urls>"
+	],
+
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"matches": ["<all_urls>"],
+			"js": ["fixer.js"],
+			"run_at": "document_end"
+		}
+	]
+}
